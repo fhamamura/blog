@@ -1,5 +1,7 @@
 name: "Docker Image Build Deploy"
+
 on: [push]
+
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -8,10 +10,9 @@ jobs:
             - uses: actions/checkout@v3
 
             - name: Run docker compose
-              uses: docker/compose-cli:1
+              uses: hoverkraft-tech/compose-action@v2.0.2
               with:
-                  compose-file: docker-compose.yml
-                  compose-command: up -d
+                  compose-file: "./docker-compose.yml"
 
             - name: Tests
               run: |
