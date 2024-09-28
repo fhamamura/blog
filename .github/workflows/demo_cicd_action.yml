@@ -8,7 +8,7 @@ jobs:
             - uses: actions/checkout@v3
 
             - name: Run docker compose
-              uses: hoverkraft-tech/compose-action@2.0.1
+              uses: hoverkraft-tech/compose-action@2.0.2
               with:
                   compose-file: "./docker-compose.yml"
 
