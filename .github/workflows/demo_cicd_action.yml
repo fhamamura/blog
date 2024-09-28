@@ -13,7 +13,7 @@ jobs:
                   compose-file: "./docker-compose.yml"
                   compose-version: "3.8"
                   context: .
-                  project-name: demo_cicd
+                  project-name: pneapp
 
             - name: Tests
               run: |
