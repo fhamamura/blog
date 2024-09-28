@@ -8,12 +8,10 @@ jobs:
             - uses: actions/checkout@v3
 
             - name: Run docker compose
-              uses: docker/compose-cli-action@v0.1.1
+              uses: docker/compose-cli:1
               with:
-                  compose-file: "./docker-compose.yml"
-                  compose-version: "3.8"
-                  context: .
-                  project-name: pneapp
+                  compose-file: docker-compose.yml
+                  compose-command: up -d
 
             - name: Tests
               run: |
