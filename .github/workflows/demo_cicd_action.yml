@@ -1,0 +1,17 @@
+name: "Docker Image Build Deploy"
+on: [push]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Run docker compose
+              uses: hoverkraft-tech/compose-action@2.0.1
+              with:
+                  compose-file: "./docker-compose.yml"
+
+            - name: Tests
+              run: |
+                  docker-compose exec app npm test
