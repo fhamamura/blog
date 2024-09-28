@@ -16,4 +16,4 @@ jobs:
 
             - name: Tests
               run: |
-                  docker-compose exec app npm test
+                  docker-compose exec npm run test
