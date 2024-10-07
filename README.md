@@ -85,7 +85,7 @@ Body:
 
 ### Testes
 
-Os testes são implementados com Jest e para executar, rode o seguinte comando: `npm test` .
+Os testes são implementados com Jest e para executar, rode o seguinte comando: `npm test --forceExit --detectOpenHandles` .
 
 Os testes cobrem as principais funcionalidas da API, incluíndo criação, leitura, atualização e remoção de posts.
 
