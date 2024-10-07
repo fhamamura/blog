@@ -156,13 +156,13 @@ const {
 
 /**
  * @swagger
- * /posts/search:
+ * /posts/search/:
  *   get:
  *     summary: Pesquisa posts
  *     tags: [Posts]
  *     parameters:
  *       - in: query
- *         name: title
+ *         name: qs
  *         schema:
  *           type: string
  *         required: false
