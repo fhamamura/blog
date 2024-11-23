@@ -82,6 +82,10 @@ const {
  *     responses:
  *       200:
  *         description: O post foi criado com sucesso.
+ *       401:
+ *         description: Não autorizado.
+ *       500:
+ *         description: Erro do servidor.
  */
 
 /**
@@ -108,6 +112,10 @@ const {
  *         description: O post foi atualizado com sucesso.
  *       404:
  *         description: Post não encontrado.
+ *       401:
+ *         description: Não autorizado.
+ *       500:
+ *         description: Erro do servidor.
  */
 
 /**
@@ -128,6 +136,10 @@ const {
  *         description: O post foi excluído com sucesso.
  *       404:
  *         description: Post não encontrado.
+ *       401:
+ *         description: Não autorizado.
+ *       500:
+ *         description: Erro do servidor.
  */
 
 /**

@@ -35,11 +35,20 @@ Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis de ambient
 ```
 PORT=3000
 MONGO_URI="mongodb://localhost:27017/mongo"
+JWT_SECRET=mysecret
+USUARIO_TESTE = "usuario_teste"
+SENHA_TESTE = "senha_teste"
 ```
 
 -   `PORT` : Define a porta em que o servidor será executado.
 
 -   `MONGO_URI` : String de conexão ao MongoDB.
+
+-   `JWT_SECRET` : String para criptografar o jsonwebtoken.
+
+-   `USUARIO_TESTE` : String do usuário teste.
+
+-   `SENHA_TESTE` : String da senha teste.
 
 ### Endpoints da API
 
