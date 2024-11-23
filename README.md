@@ -33,7 +33,7 @@ O servidor irá rodar em `https://localhost:3000`.
 Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis de ambiente:
 
 ```
-PORT=3000
+PORT=5000
 MONGO_URI="mongodb://localhost:27017/mongo"
 JWT_SECRET=mysecret
 USUARIO_TESTE = "usuario_teste"
@@ -102,7 +102,7 @@ Os testes cobrem as principais funcionalidas da API, incluíndo criação, leitu
 
 A documentação da API está disponível em Swagger.
 
-Após iniciar o servidor, acesse a documentação em: `http://localhost:3000/api-docs`
+Após iniciar o servidor, acesse a documentação em: `http://localhost:5000/api-docs`
 
 Para adicionar a documentação com Swagger, foi utilizado o pacote `swagger-jsdoc` e `swagger-ui-express`.
 
