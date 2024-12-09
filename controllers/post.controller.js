@@ -1,10 +1,18 @@
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 const Post = require("../models/post.model.js");
 
 function verifyJWT(req, res, next) {
-	const token = req.headers["authorization"];
-	if (!token)
+	token = req.headers["authorization"];
+	if (!token) {
 		return res.status(401).json({ auth: false, message: "Sem token." });
+	}
+
+	if (token.startsWith("Bearer ")) {
+		token = token.slice(7, token.length);
+	}
+	//console.log("Token recebido:", token);
+	//console.log("Segredo JWT:", process.env.JWT_SECRET);
 
 	jwt.verify(token, process.env.JWT_SECRET, function (err, decoded) {
 		if (err)

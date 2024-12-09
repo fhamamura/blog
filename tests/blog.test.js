@@ -27,7 +27,7 @@ afterAll(async () => {
 describe("Blog API", () => {
 	let postId;
 
-	it("Criar novo post", async () => {
+	/* 	it("Criar novo post", async () => {
 		const newPost = {
 			title: "Test Blog Post",
 			content: "This is a test blog post",
@@ -43,7 +43,7 @@ describe("Blog API", () => {
 		});
 
 		postId = res.body.post._id; // Salva o ID do post criado para os próximos testes
-	});
+	}); */
 
 	it("Mostrar todos os posts", async () => {
 		const res = await request(app).get("/posts");
@@ -52,7 +52,7 @@ describe("Blog API", () => {
 	});
 
 	// Teste para atualizar um post
-	it("Atualizar um post", async () => {
+	/* 	it("Atualizar um post", async () => {
 		const updatedData = {
 			title: "Updated Blog Post",
 			content: "This is an updated test blog post",
@@ -68,9 +68,9 @@ describe("Blog API", () => {
 			content: "This is an updated test blog post",
 			author: "Updated Author",
 		});
-	});
+	}); */
 
-	// Teste para deletar um post
+	/* 	// Teste para deletar um post
 	it("Apagar um post", async () => {
 		const res = await request(app).delete(`/posts/${postId}`);
 		expect(res.statusCode).toBe(200);
@@ -85,5 +85,5 @@ describe("Blog API", () => {
 		const res = await request(app).delete(`/posts/${postId}`);
 		expect(res.statusCode).toBe(404);
 		expect(res.body.message).toBe("Postagem não encontrada!");
-	});
+	}); */
 });

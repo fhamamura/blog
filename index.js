@@ -9,8 +9,10 @@ const app = express();
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 require("dotenv").config();
+const cors = require("cors");
 
 //Middleware
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -25,7 +27,7 @@ const swaggerOptions = {
 		},
 		servers: [
 			{
-				url: "http://localhost:3000",
+				url: "http://localhost:5000",
 			},
 		],
 	},
@@ -41,7 +43,7 @@ app.use("/login", postLogin);
 app.use("/logout", getLogout);
 
 mongoose
-	.connect(process.env.MONGO_URI_ATLAS)
+	.connect(process.env.MONGO_URI)
 	.then(() => {
 		console.log("Conectado ao banco de dados!");
 		/* 		app.listen(process.env.PORT, () => {

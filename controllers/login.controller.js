@@ -4,12 +4,12 @@ const jwt = require("jsonwebtoken");
 const login = async (req, res) => {
 	try {
 		if (
-			req.body.user === process.env.USUARIO_TESTE &&
+			req.body.email === process.env.USUARIO_TESTE &&
 			req.body.password === process.env.SENHA_TESTE
 		) {
 			const id = 1;
 			const token = jwt.sign({ id }, process.env.JWT_SECRET, {
-				expiresIn: 300,
+				expiresIn: 3000,
 			});
 			return res.status(200).json({ auth: true, token: token });
 		} else {
