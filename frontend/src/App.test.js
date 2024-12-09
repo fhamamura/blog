@@ -4,8 +4,8 @@ import { MemoryRouter } from "react-router-dom";
 import App from "./App";
 
 // Mock dos componentes de página para simplificar os testes
-jest.mock("./pages/Posts", () => jest.fn(() => <div>Posts Page</div>));
-jest.mock("./pages/Login", () => jest.fn(() => <div>Login Page</div>));
+jest.mock("/Posts", () => jest.fn(() => <div>Posts Page</div>));
+jest.mock("/Login", () => jest.fn(() => <div>Login Page</div>));
 
 describe("App Routing", () => {
 	it('deve renderizar a página de Posts ao acessar "/"', () => {
