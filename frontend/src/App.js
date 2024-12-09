@@ -13,7 +13,7 @@ import Novo from "./pages/Novo";
 import Editar from "./pages/Editar";
 import Apagar from "./pages/Apagar";
 import Buscar from "./pages/Buscar";
-import { AuthProvider, useAuth } from "./context/AuthContext";
+import { AuthProvider } from "./context/AuthContext";
 
 function App() {
 	return (
